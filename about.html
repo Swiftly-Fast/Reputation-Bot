@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Reputation Bot.">
+    <title>About - Reputation Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Include all the styles from index.html */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #1a1a1a, #2c2f33);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #7289da;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px #000000;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #23272a;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.5em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #7289da;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background-color: #23272a;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 1em;
+        }
+
+        .details {
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #e3e3e3;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Reputation Bot</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="commands.html">Commands</a>
+        <a href="invite.html">Invite</a>
+        <a href="support.html">Support</a>
+    </nav>
+
+    <section>
+        <h2>Who We Are</h2>
+        <img src="banner.png" alt="Reputation Bot Banner">
+        <p class="details">Reputation Bot was developed with a singular purpose: to enhance user engagement in Discord communities. Our team of dedicated developers and community managers understands the need for fostering positive interactions among users, and we have poured our passion and expertise into creating a bot that is not only functional but also a joy to use. We recognize that a vibrant community is built on meaningful interactions, and that's why we are committed to providing a tool that empowers users to connect, appreciate, and recognize each other.</p>
+        <p class="details">With advanced features like reputation tracking, point systems, and rewards, Reputation Bot is designed to cater to the unique needs of each community. We believe that every interaction matters, and our bot is here to ensure that every member feels valued. Whether you're managing a small server or a large community, our bot scales with your needs, providing the tools necessary to keep interactions positive and rewarding.</p>
+        <p class="details">Our journey began when we identified a gap in the tools available for community managers. Many bots offered basic moderation features, but none focused on promoting positive engagement. Thus, Reputation Bot was born—an innovative solution to a pressing issue. Our mission is simple: to transform the way communities interact and thrive together.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reputation Bot. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

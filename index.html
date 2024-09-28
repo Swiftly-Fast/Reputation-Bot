@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Reputation Bot's official website! Join us to enhance user engagement in your Discord community.">
+    <title>Reputation Bot</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #1a1a1a, #2c2f33);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #7289da;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px #000000;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #23272a;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.5em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #7289da;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between the two images */
+        }
+
+        .image-container img {
+            width: 40%; /* Adjusted width for smaller images */
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.5s, opacity 0.5s;
+            opacity: 0;
+            transform: scale(0.8); /* Shrunk size on load */
+        }
+
+        .image-container img:hover {
+            transform: scale(1); /* Grow on hover */
+            opacity: 1; /* Fade to full opacity */
+        }
+
+        @keyframes imageFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .image-container img {
+            animation: imageFadeIn 1s ease-in-out forwards;
+        }
+
+        footer {
+            background-color: #23272a;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 1em;
+        }
+
+        .invitation {
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #e3e3e3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Reputation Bot!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="commands.html">Commands</a>
+        <a href="invite.html">Invite</a>
+        <a href="support.html">Support</a>
+    </nav>
+
+    <section>
+        <h2>Join Our Community</h2>
+        <p>Reputation Bot helps to enhance user engagement and promote positive interactions, making it perfect for any Discord community.</p>
+        
+        <!-- Image container for two side-by-side images -->
+        <div class="image-container">
+            <img src="modified_bot_avatar_with_rep_point.png" alt="Reputation Bot Avatar">
+            <img src="cool.webp" alt="Cool Image of the Bot">
+        </div>
+
+        <p class="invitation">Reputation Bot is your ultimate tool for fostering a thriving community. With its user-friendly interface and powerful features, you can effortlessly manage interactions among your members. This bot is designed not just for efficiency but also for ensuring that each member feels valued and recognized for their contributions. With our innovative reputation system, users can give and receive points, enhancing engagement and encouraging positive behavior.</p>
+
+        <p class="invitation">By integrating Reputation Bot into your Discord server, you are taking a step towards creating an environment where appreciation and recognition are at the forefront. Our bot encourages users to interact more positively, rewards them for their contributions, and fosters a sense of community that is essential for any successful Discord server. Whether you're a community leader looking to enhance engagement or a member wanting to promote positive interactions, Reputation Bot is the right choice for you!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reputation Bot. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
