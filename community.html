@@ -1,108 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join the community for Reputation Bot.">
-    <title>Community - Reputation Bot</title>
+    <meta name="description" content="Reputation Bot - Commands">
+    <title>Reputation Bot Commands</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #2c2f33;
-            color: #fff;
+            background: linear-gradient(90deg, #1a1a1a, #2c2f33);
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            animation: fadeIn 1s ease-in;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+
         header {
             background-color: #7289da;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            text-shadow: 2px 2px #000000;
         }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #23272a;
             padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s;
+            margin: 0 20px;
+            font-size: 1.5em;
+            transition: color 0.3s, transform 0.3s;
         }
+
         nav a:hover {
             color: #7289da;
+            transform: scale(1.1);
         }
+
         section {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            animation: fadeIn 1s ease-in;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
-        .button {
-            background-color: #7289da;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 1.5em;
-            border-radius: 5px;
-            margin: 20px auto;
-            display: inline-block;
-            transition: background-color 0.3s, transform 0.3s;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        .button:hover {
-            background-color: #5b6eae;
-            transform: translateY(-2px);
-        }
+
         footer {
             background-color: #23272a;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
         }
+
         footer p {
-            margin: 0;
+            margin: 5px;
+            font-size: 1em;
+        }
+
+        .command {
+            margin-bottom: 40px;
+        }
+
+        .command h2 {
+            font-size: 2em;
+            color: #7289da;
+        }
+
+        .command p {
+            font-size: 1.2em;
+            line-height: 1.6;
         }
     </style>
 </head>
+
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Join Our Community</h1>
+        <h1>Reputation Bot Commands</h1>
     </header>
 
-    <!-- Navigation Links -->
     <nav>
         <a href="index.html">Home</a>
-        <a href="invite.html">Invite</a>
-        <a href="community.html">Community</a>
         <a href="about.html">About</a>
         <a href="commands.html">Commands</a>
+        <a href="invite.html">Invite</a>
         <a href="support.html">Support</a>
     </nav>
 
-    <!-- Community Section -->
     <section>
-        <h2>Welcome to the Reputation Bot Community!</h2>
-        <p>Join our support server to get help, report issues, or just hang out with other users!</p>
-        <a href="https://discord.gg/x2SByduvW6" class="button">Join the Support Server</a>
+        <h2>Commands List</h2>
+
+        <div class="command">
+            <h2>?rep {user}</h2>
+            <p>
+                Use this command to give a reputation point to another user. However, if you rep someone else later,
+                your reputation point will be transferred to the new user. This ensures that at any given time, a user can only give one reputation point.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?rep @User</code> - Gives a reputation point to the mentioned user.</p>
+        </div>
+
+        <div class="command">
+            <h2>?reppoints {user}</h2>
+            <p>
+                This command lets you check how many reputation points a specific user has. If you don't specify a user, 
+                the bot will return your own reputation points in the current server. It's a quick way to see how appreciated you or others are in the community.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?reppoints</code> - Checks your own reputation points.<br>
+               <code>?reppoints @User</code> - Checks the reputation points of the mentioned user.
+            </p>
+        </div>
+
+        <div class="command">
+            <h2>?serverreps</h2>
+            <p>
+                Use this command to display a list of all users with reputation points in the current server, along with their point totals. 
+                This list is server-specific, so it will change depending on which server you are in when you run the command.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?serverreps</code> - Shows all users with reputation points in the current server.</p>
+        </div>
+
+        <div class="command">
+            <h2>?myreps</h2>
+            <p>
+                This command only works in Direct Messages (DMs). It gives you a detailed breakdown of how many reputation points you have across all servers where the bot is present. 
+                It's a great way to track your reputation activity and contributions across different communities.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?myreps</code> - Shows a summary of your reputation points across all servers, but only in DMs.</p>
+        </div>
+
+        <div class="command">
+            <h2>?globalrep {user}</h2>
+            <p>
+                This command displays the total reputation points of a specified user across all servers. If no user is specified, it will show your own total reputation points globally. 
+                This is useful for tracking how your reputation compares across multiple communities.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?globalrep</code> - Shows your total reputation points across all servers.<br>
+               <code>?globalrep @User</code> - Shows the total reputation points for the mentioned user across all servers.
+            </p>
+        </div>
+
+        <div class="command">
+            <h2>?repclear {user}</h2>
+            <p>
+                This command is used to clear the reputation points for a specified user in the current server. Only the bot owner can use this command. 
+                If no user is specified, it will clear all reputation points in the server.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?repclear @User</code> - Clears the reputation points for the mentioned user in the current server.<br>
+               <code>?repclear</code> - Clears all reputation points in the server (owner only).
+            </p>
+        </div>
+
+        <div class="command">
+            <h2>?repclearglobal {user}</h2>
+            <p>
+                This command clears all reputation points for a specified user across all servers. Like the ?repclear command, only the bot owner can use this command. 
+                If no user is specified, it will clear all reputation points for every user across all servers.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?repclearglobal @User</code> - Clears all reputation points for the mentioned user across all servers.<br>
+               <code>?repclearglobal</code> - Clears all reputation points for every user across all servers (owner only).
+            </p>
+        </div>
+
+        <div class="command">
+            <h2>/servers</h2>
+            <p>
+                This is a slash command that shows the number of servers the bot is currently in. It provides an invite link to add the bot to other servers. 
+                This command is helpful for users to understand the bot's reach and manage their own server.
+            </p>
+            <p><strong>Usage Example:</strong> <code>/servers</code> - Displays the number of servers the bot is in along with an invite link.</p>
+        </div>
+
+        <div class="command">
+            <h2>?commands</h2>
+            <p>
+                This command lists all the commands available for the bot, along with a brief description of each. 
+                It's useful for users to quickly familiarize themselves with the bot's functionalities and how to interact with it.
+            </p>
+            <p><strong>Usage Example:</strong> <code>?commands</code> - Displays all commands and their descriptions.</p>
+        </div>
+
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Reputation Bot. All rights reserved.</p>
     </footer>
-
 </body>
+
 </html>
