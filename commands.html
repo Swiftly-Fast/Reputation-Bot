@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+r<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -109,94 +109,65 @@
     <section>
         <h2>Commands List</h2>
 
-        <div class="command">
-            <h2>?rep {user}</h2>
-            <p>
-                Use this command to give a reputation point to another user. However, if you rep someone else later,
-                your reputation point will be transferred to the new user. This ensures that at any given time, a user can only give one reputation point.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?rep @User</code> - Gives a reputation point to the mentioned user.</p>
-        </div>
+    <div class="command">
+        <h2>🌟 ?rep &lt;user&gt;</h2>
+        <p><strong>Description:</strong> Give reputation points to a user. This command encourages positive interactions within the server by enabling users to acknowledge each other's contributions or helpfulness.</p>
+        <p><strong>Restrictions:</strong> You can only give one reputation point at a time. You cannot give a point to yourself or to bots. Additionally, you cannot give reputation points to the same user consecutively.</p>
+    </div>
 
-        <div class="command">
-            <h2>?reppoints {user}</h2>
-            <p>
-                This command lets you check how many reputation points a specific user has. If you don't specify a user, 
-                the bot will return your own reputation points in the current server. It's a quick way to see how appreciated you or others are in the community.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?reppoints</code> - Checks your own reputation points.<br>
-               <code>?reppoints @User</code> - Checks the reputation points of the mentioned user.
-            </p>
-        </div>
+    <div class="command">
+        <h2>🔍 ?reppoints &lt;user&gt;</h2>
+        <p><strong>Description:</strong> Show a user's reputation points in the server. This command provides a way to check how much recognition a user has received from others.</p>
+        <p><strong>Restrictions:</strong> Accessible to any member of the server.</p>
+    </div>
 
-        <div class="command">
-            <h2>?serverreps</h2>
-            <p>
-                Use this command to display a list of all users with reputation points in the current server, along with their point totals. 
-                This list is server-specific, so it will change depending on which server you are in when you run the command.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?serverreps</code> - Shows all users with reputation points in the current server.</p>
-        </div>
+    <div class="command">
+        <h2>📊 ?serverreps</h2>
+        <p><strong>Description:</strong> Display all users with reputation points in the server. This command highlights members who are recognized within the community, promoting engagement among users.</p>
+        <p><strong>Restrictions:</strong> No restrictions; any server member can use this command.</p>
+    </div>
 
-        <div class="command">
-            <h2>?myreps</h2>
-            <p>
-                This command only works in Direct Messages (DMs). It gives you a detailed breakdown of how many reputation points you have across all servers where the bot is present. 
-                It's a great way to track your reputation activity and contributions across different communities.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?myreps</code> - Shows a summary of your reputation points across all servers, but only in DMs.</p>
-        </div>
+    <div class="command">
+        <h2>💌 ?myreps</h2>
+        <p><strong>Description:</strong> View your reputation points across all servers (DM only). This command provides insights into how you are perceived by others in different communities.</p>
+        <p><strong>Restrictions:</strong> Results are sent via direct message for privacy reasons.</p>
+    </div>
 
-        <div class="command">
-            <h2>?globalrep {user}</h2>
-            <p>
-                This command displays the total reputation points of a specified user across all servers. If no user is specified, it will show your own total reputation points globally. 
-                This is useful for tracking how your reputation compares across multiple communities.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?globalrep</code> - Shows your total reputation points across all servers.<br>
-               <code>?globalrep @User</code> - Shows the total reputation points for the mentioned user across all servers.
-            </p>
-        </div>
+    <div class="command">
+        <h2>🛠️ ?commands</h2>
+        <p><strong>Description:</strong> Show a list of all commands supported by the bot. This command helps users familiarize themselves with the bot's functionalities.</p>
+        <p><strong>Restrictions:</strong> No restrictions; any user can access this command.</p>
+    </div>
 
-        <div class="command">
-            <h2>?repclear {user}</h2>
-            <p>
-                This command is used to clear the reputation points for a specified user in the current server. Only the bot owner can use this command. 
-                If no user is specified, it will clear all reputation points in the server.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?repclear @User</code> - Clears the reputation points for the mentioned user in the current server.<br>
-               <code>?repclear</code> - Clears all reputation points in the server (owner only).
-            </p>
-        </div>
+    <div class="command">
+        <h2>🐞 ?botbugs</h2>
+        <p><strong>Description:</strong> Lists any known bugs that the bot's developer team is currently aware of. This command keeps users updated on the bot's performance and encourages them to report any new bugs they encounter.</p>
+        <p><strong>Restrictions:</strong> Available to all users without restrictions.</p>
+    </div>
 
-        <div class="command">
-            <h2>?repclearglobal {user}</h2>
-            <p>
-                This command clears all reputation points for a specified user across all servers. Like the ?repclear command, only the bot owner can use this command. 
-                If no user is specified, it will clear all reputation points for every user across all servers.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?repclearglobal @User</code> - Clears all reputation points for the mentioned user across all servers.<br>
-               <code>?repclearglobal</code> - Clears all reputation points for every user across all servers (owner only).
-            </p>
-        </div>
+    <div class="command">
+        <h2>🌐 ?globalrep &lt;user&gt;</h2>
+        <p><strong>Description:</strong> Show total reputation points for a user across all servers. This command provides a broader perspective on a user's reputation beyond the current server.</p>
+        <p><strong>Restrictions:</strong> Accessible to any user, as long as they specify a valid user.</p>
+    </div>
 
-        <div class="command">
-            <h2>/servers</h2>
-            <p>
-                This is a slash command that shows the number of servers the bot is currently in. It provides an invite link to add the bot to other servers. 
-                This command is helpful for users to understand the bot's reach and manage their own server.
-            </p>
-            <p><strong>Usage Example:</strong> <code>/servers</code> - Displays the number of servers the bot is in along with an invite link.</p>
-        </div>
+    <div class="command">
+        <h2>🗑️ ?repclear &lt;user&gt;</h2>
+        <p><strong>Description:</strong> Clear reputation points for a user in the server. This command is useful for moderating reputation management when necessary.</p>
+        <p><strong>Restrictions:</strong> Only the bot owner can execute this command.</p>
+    </div>
 
-        <div class="command">
-            <h2>?commands</h2>
-            <p>
-                This command lists all the commands available for the bot, along with a brief description of each. 
-                It's useful for users to quickly familiarize themselves with the bot's functionalities and how to interact with it.
-            </p>
-            <p><strong>Usage Example:</strong> <code>?commands</code> - Displays all commands and their descriptions.</p>
-        </div>
+    <div class="command">
+        <h2>🧹 ?repclearglobal &lt;user&gt;</h2>
+        <p><strong>Description:</strong> Clear all reputation points for a user across all servers. This administrative command is used to maintain fairness and integrity within the bot's reputation system.</p>
+        <p><strong>Restrictions:</strong> Only the bot owner has permission to use this command.</p>
+    </div>
+
+    <div class="command">
+        <h2>📈 /servers</h2>
+        <p><strong>Description:</strong> Show how many servers are currently using the bot and provide an invite link for users to add the bot to their own servers. This command promotes the bot and encourages more users to join the community.</p>
+        <p><strong>Restrictions:</strong> No restrictions; any user can access this command.</p>
+    </div>
 
     </section>
 
