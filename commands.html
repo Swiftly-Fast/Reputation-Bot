@@ -1,4 +1,4 @@
-r<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,6 +15,11 @@ r<!DOCTYPE html>
             padding: 0;
             overflow-x: hidden;
             animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         header {
@@ -79,6 +84,13 @@ r<!DOCTYPE html>
 
         .command {
             margin-bottom: 40px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .command:hover {
+            background-color: #7289da;
+            transform: scale(1.05);
+            color: white;
         }
 
         .command h2 {
@@ -90,6 +102,15 @@ r<!DOCTYPE html>
             font-size: 1.2em;
             line-height: 1.6;
         }
+
+        .command strong {
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -99,75 +120,65 @@ r<!DOCTYPE html>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="commands.html">Commands</a>
-        <a href="invite.html">Invite</a>
-        <a href="support.html">Support</a>
+        <a href="index.html"> Home</a>
+        <a href="about.html"> About</a>
+        <a href="commands.html"> Commands</a>
+        <a href="invite.html"> Invite</a>
+        <a href="support.html"> Support</a>
     </nav>
 
     <section>
         <h2>Commands List</h2>
 
-    <div class="command">
-        <h2>🌟 ?rep &lt;user&gt;</h2>
-        <p><strong>Description:</strong> Give reputation points to a user. This command encourages positive interactions within the server by enabling users to acknowledge each other's contributions or helpfulness.</p>
-        <p><strong>Restrictions:</strong> You can only give one reputation point at a time. You cannot give a point to yourself or to bots. Additionally, you cannot give reputation points to the same user consecutively.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🌟</span> ?rep &lt;user&gt;</h2>
+            <p><strong>Description:</strong> This command allows you to give a reputation point to another user, signifying their positive contributions to the server. It encourages interactions and appreciation among users, fostering a supportive community. However, you can only give one point at a time, ensuring that each point given has value. It’s important to note that you cannot give reputation to yourself or bots, and you cannot give consecutive points to the same person to avoid spamming the system.</p>
+        </div>
 
-    <div class="command">
-        <h2>🔍 ?reppoints &lt;user&gt;</h2>
-        <p><strong>Description:</strong> Show a user's reputation points in the server. This command provides a way to check how much recognition a user has received from others.</p>
-        <p><strong>Restrictions:</strong> Accessible to any member of the server.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🔍</span> ?reppoints &lt;user&gt;</h2>
+            <p><strong>Description:</strong> Curious about how well someone is doing in terms of reputation? This command shows how many reputation points a user has accumulated within the current server. It’s a quick way to check who’s being appreciated for their contributions. This command is accessible to all members and provides insight into the recognition a user has earned from their peers.</p>
+        </div>
 
-    <div class="command">
-        <h2>📊 ?serverreps</h2>
-        <p><strong>Description:</strong> Display all users with reputation points in the server. This command highlights members who are recognized within the community, promoting engagement among users.</p>
-        <p><strong>Restrictions:</strong> No restrictions; any server member can use this command.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">📊</span> ?serverreps</h2>
+            <p><strong>Description:</strong> This command gives you a list of all users in the server who have received reputation points. It highlights the most recognized members, creating a sense of achievement and encouraging more interaction and engagement within the community. Anyone in the server can use this command to see who’s making an impact.</p>
+        </div>
 
-    <div class="command">
-        <h2>💌 ?myreps</h2>
-        <p><strong>Description:</strong> View your reputation points across all servers (DM only). This command provides insights into how you are perceived by others in different communities.</p>
-        <p><strong>Restrictions:</strong> Results are sent via direct message for privacy reasons.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">💌</span> ?myreps</h2>
+            <p><strong>Description:</strong> Ever wonder how you’re doing in terms of reputation? Use this command to privately view your reputation points across all servers. This information is sent to you via direct message, maintaining your privacy while allowing you to track your progress and reputation in the various communities you’re a part of.</p>
+        </div>
 
-    <div class="command">
-        <h2>🛠️ ?commands</h2>
-        <p><strong>Description:</strong> Show a list of all commands supported by the bot. This command helps users familiarize themselves with the bot's functionalities.</p>
-        <p><strong>Restrictions:</strong> No restrictions; any user can access this command.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🛠️</span> ?commands</h2>
+            <p><strong>Description:</strong> Not sure what commands are available to you? This command provides a comprehensive list of all the commands the bot supports. It’s a great way to explore everything the bot can do and ensure you’re making the most out of its features. Accessible to all users, it’s your guide to the bot’s capabilities.</p>
+        </div>
 
-    <div class="command">
-        <h2>🐞 ?botbugs</h2>
-        <p><strong>Description:</strong> Lists any known bugs that the bot's developer team is currently aware of. This command keeps users updated on the bot's performance and encourages them to report any new bugs they encounter.</p>
-        <p><strong>Restrictions:</strong> Available to all users without restrictions.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🐞</span> ?botbugs</h2>
+            <p><strong>Description:</strong> This command lists all known bugs and issues the development team is aware of. It helps keep users informed about the current state of the bot and assures them that any problems are being addressed. If you encounter any new bugs, this command encourages you to report them to the support team to help improve the bot.</p>
+        </div>
 
-    <div class="command">
-        <h2>🌐 ?globalrep &lt;user&gt;</h2>
-        <p><strong>Description:</strong> Show total reputation points for a user across all servers. This command provides a broader perspective on a user's reputation beyond the current server.</p>
-        <p><strong>Restrictions:</strong> Accessible to any user, as long as they specify a valid user.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🌐</span> ?globalrep &lt;user&gt;</h2>
+            <p><strong>Description:</strong> This command provides a more expansive view of a user’s reputation by showing their total points across all servers the bot is in. It’s a great way to see a user’s reputation footprint and the impact they’ve had across different communities. Accessible to all users, it gives a broader perspective on a person’s influence.</p>
+        </div>
 
-    <div class="command">
-        <h2>🗑️ ?repclear &lt;user&gt;</h2>
-        <p><strong>Description:</strong> Clear reputation points for a user in the server. This command is useful for moderating reputation management when necessary.</p>
-        <p><strong>Restrictions:</strong> Only the bot owner can execute this command.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🗑️</span> ?repclear &lt;user&gt;</h2>
+            <p><strong>Description:</strong> This powerful command allows the bot owner to clear a user's reputation points within a specific server. It’s useful for managing abuse or maintaining fairness. However, it’s restricted to the bot owner to prevent misuse and maintain the integrity of the reputation system.</p>
+        </div>
 
-    <div class="command">
-        <h2>🧹 ?repclearglobal &lt;user&gt;</h2>
-        <p><strong>Description:</strong> Clear all reputation points for a user across all servers. This administrative command is used to maintain fairness and integrity within the bot's reputation system.</p>
-        <p><strong>Restrictions:</strong> Only the bot owner has permission to use this command.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">🧹</span> ?repclearglobal &lt;user&gt;</h2>
+            <p><strong>Description:</strong> This command goes one step further by clearing a user’s reputation points across all servers where the bot is active. It’s an administrative tool reserved for the bot owner, ensuring that only trusted individuals can manage reputations on such a large scale.</p>
+        </div>
 
-    <div class="command">
-        <h2>📈 /servers</h2>
-        <p><strong>Description:</strong> Show how many servers are currently using the bot and provide an invite link for users to add the bot to their own servers. This command promotes the bot and encourages more users to join the community.</p>
-        <p><strong>Restrictions:</strong> No restrictions; any user can access this command.</p>
-    </div>
+        <div class="command">
+            <h2><span class="emoji">📈</span> /servers</h2>
+            <p><strong>Description:</strong> Want to know how many servers the bot is currently in? This command not only provides that number but also gives you an invite link to add the bot to more servers. It’s a great way to share the bot with other communities and keep track of its growing popularity.</p>
+        </div>
 
     </section>
 
